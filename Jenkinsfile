@@ -4,12 +4,12 @@ pipeline {
     stages{
         stage('Code'){
             steps{
-                git url: 'https://github.com/LondheShubham153/node-todo-cicd.git', branch: 'master' 
+                git url: 'https://github.com/mmohamm5/node-todo-cicd.git', branch: 'master' 
             }
         }
         stage('Build and Test'){
             steps{
-                sh 'docker build . -t trainwithshubham/node-todo-test:latest'
+                sh 'docker build . -t /node-todo-test:latest'
             }
         }
         stage('Push'){
